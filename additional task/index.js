@@ -15,16 +15,15 @@ const createElement = (tag, attributes, parent) => {
 const templateDisplaying = (post, comments) => {
     createElement("div", {id: "post", className: "post"}, "body");
     createElement("h1", {className: "post__title", textContent: `${post.title}`}, ".post");
+    //Сделал тэг <p> вмето <b>, жирность сделал в css
     createElement("p", {className: "post__text", textContent: `${post.body}`}, ".post");
-    createElement("p", {}, ".post")
-    createElement("strong", {className: "post__comments-text", textContent: "Комментарии"}, "p");
+    createElement("p", {className: "post__comments-text", textContent: "Комментарии"}, ".post");
     createElement("div", {className: "post__comments"}, ".post");
     comments.forEach(comment => {
         createElement("div", {className: "post-comment"}, ".post__comments")
         createElement("span", {className: "post-comment__author", textContent: `${comment.email}`}, ".post-comment");
         createElement("span", {className: "post-comment__text", textContent: `${comment.body}`}, ".post-comment");
     })
-
 }
 
 const renderPost = async (postId) => {

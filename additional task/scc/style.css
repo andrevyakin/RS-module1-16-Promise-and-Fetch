@@ -25,7 +25,8 @@ body {
 .post__comments-text {
     display: block;
     text-align: center;
-    font-size: large;
+    font-size: 1.5rem;
+    font-weight: bold;
     letter-spacing: 0.5rem;
     margin-top: 2rem;
 }
